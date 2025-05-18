@@ -1,0 +1,17 @@
+🔹 Problem 2 – Print Odd Numbers in Series (Count Based):
+In this problem, I am asked to print the first  odd numbers. The sequence starts from 1 and increases by 2 each time (1, 3, 5, ...). The focus is on generating a specific number of elements rather than reaching a value limit. This helps reinforce loop control using counters and understanding how odd numbers progress. It's simple but teaches how to manipulate values inside a loop without hardcoding. The pattern always produces a values.
+
+Java code:
+
+import java.util.*;
+
+public class Problem2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+
+        for (int i = 0, num = 1; i < a; i++, num += 2) {
+            System.out.print(num + (i < a - 1 ? ", " : ""));
+        }
+    }
+}

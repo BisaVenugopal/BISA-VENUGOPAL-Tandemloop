@@ -1,0 +1,25 @@
+Problem 1: Calculator using class
+
+This task involves designing a simple calculator that performs basic arithmetic operations: addition, subtraction, multiplication, and division. The calculator takes two double values and a string indicating the operation. I have used object-oriented programming by encapsulating logic within a class. It demonstrates class structure, method usage, and control flow. The program also handles invalid operations and division by zero.
+
+Java Code:
+class Calculator {
+    double a, b;
+    String operation;
+
+    Calculator(double a, double b, String operation) {
+        this.a = a;
+        this.b = b;
+        this.operation = operation.toLowerCase();
+    }
+
+    double compute() {
+        switch (operation) {
+            case "add": return a + b;
+            case "subtract": return a - b;
+            case "multiply": return a * b;
+            case "divide": return b != 0 ? a / b : Double.NaN;
+            default: throw new IllegalArgumentException("Invalid operation");
+        }
+    }
+}

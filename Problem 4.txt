@@ -1,0 +1,23 @@
+ Problem 4 – Count Multiples in an Array:
+This problem involves checking how many numbers in a given list are divisible by each of the digits from 1 to 9. I have iterated through the list and for each number, check divisibility against 1–9. The result is a map showing the count of numbers divisible by each digit. This problem strengthens my skills in nested loops, modulus operations, and using data structures like HashMap. It’s great for practicing logic building and frequency counting in arrays.
+
+Java Code:
+
+import java.util.*;
+
+public class Problem4 {
+    public static void main(String[] args) {
+        int[] arr = {1,2,8,9,12,46,76,82,15,20,30};
+        Map<Integer, Integer> result = new HashMap<>();
+
+        for (int i = 1; i <= 9; i++) result.put(i, 0);
+
+        for (int num : arr) {
+            for (int i = 1; i <= 9; i++) {
+                if (num % i == 0) result.put(i, result.get(i) + 1);
+            }
+        }
+
+        System.out.println(result);
+    }
+}

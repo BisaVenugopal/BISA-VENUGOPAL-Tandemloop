@@ -1,0 +1,17 @@
+🔹 Problem 3 – Print Odd Numbers in Series (Input Value Based):
+Here, the number of odd values printed depends on the input number’s parity. If the input is even, the output contains one less element than if it were odd. The logic ensures that the odd number sequence doesn't exceed a value-based threshold. This variation teaches conditionals and the difference between value-bound and count-bound iteration. It’s helpful for understanding branching and controlling output size. It's subtly different from Problem 2 despite the similar output style.
+
+Java code:
+import java.util.*;
+
+public class Problem3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int limit = (a % 2 == 0) ? a - 1 : a;
+
+        for (int i = 1, count = 0; count < limit; i += 2, count++) {
+            System.out.print(i + (count < limit - 1 ? ", " : ""));
+        }
+    }
+}
